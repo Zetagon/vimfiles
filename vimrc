@@ -10,6 +10,8 @@ Plug 'prabirshrestha/async.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-fugitive'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'morhetz/gruvbox'
 Plug 'rust-lang/rust.vim'
@@ -65,6 +67,13 @@ call plug#end()
   nnoremap <leader>fs :w<CR>
   nnoremap <leader>feR :so ~/.vim/vimrc<CR>
   nnoremap <leader>fed :e ~/.vim/vimrc<CR>
+  nnoremap <leader>bd :bd<CR>
+  " Fugitive related
+    nnoremap <leader>gs :Gstatus<CR>
+    nnoremap <LocalLeader>dp :diffput<CR>:diffupdate<CR>
+    vnoremap <LocalLeader>dp :diffput<CR>:diffupdate<CR>
+    nnoremap <LocalLeader>dg :diffget<CR>:diffupdate<CR>
+    vnoremap <LocalLeader>dg :diffget<CR>:diffupdate<CR>
   " LSP keymaps
     nnoremap <silent> K :call LanguageClient#textDocument_hover()<CR>
     nnoremap <silent> gd :call LanguageClient#textDocument_definition()<CR>

@@ -16,6 +16,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'morhetz/gruvbox'
 Plug 'rust-lang/rust.vim'
 Plug 'vim-syntastic/syntastic'
+Plug 'neovimhaskell/haskell-vim'
 
 
 
@@ -47,7 +48,14 @@ call plug#end()
   \ 'rust': ['~/.cargo/bin/rustup', 'run', 'nightly', 'rls'],
   \ 'haskell': ['hie-wrapper'],
   \ }
-
+" Haskell
+  let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
+  let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
+  let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`
+  let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
+  let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
+  let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
+  let g:haskell_backpack = 1                " to enable highlighting of backpack keywords
 " Syntastic
   set statusline+=%#warningmsg#
   set statusline+=%{SyntasticStatuslineFlag()}
